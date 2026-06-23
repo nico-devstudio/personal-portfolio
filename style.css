@@ -20,7 +20,7 @@
       -> Choose any color 
       -> Copy the color mode (HSL)
   */
-    --hue: 220;
+    --hue: 180;
     --first-color: hsl(var(--hue), 80%, 48%);
     --first-color-alt: hsl(var(--hue), 80%, 44%);
     --white-color: hsl(var(--hue), 8%, 92%);
@@ -138,101 +138,13 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--body-color);
-    z-index: var(--z-fixed);
-    transition: box-shadow .4s;
-}
-
-.nav {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__logo img {
-    max-width: 6rem;
-    transition: transform .4s;
-}
-
-.nav__logo img:hover {
-    transform: scale(1.1);
-}
-
-.nav__toggle,
-.nav__close {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
 
 
 /* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
-    .nav__menu {
-        position: fixed;
-        top: -120%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        box-shadow: 0 8px 16px hsla(0, 0%, 0%, .5);
-        padding-block: 5rem 4rem;
-        border-radius: 0 0 1.5rem 1.5rem;
-        transition: top .4s;
-    }
-
-
-}
-
-.nav__list {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-}
-
-.nav__link {
-    position: relative;
-    color: var(--white-color);
-    font-weight: var(--font-medium);
-    transition: color .4s, width .4s;
-}
-
-.nav__link::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background-color: var(--first-color);
-    position: absolute;
-    left: 0;
-    bottom: -.5rem;
-    transition: width .4s;
-}
-
-.nav__link:hover {
-    color: var(--first-color);
-}
-
-.nav__link:hover::after {
-    width: 60%;
-}
-
-.nav__close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-}
-
 
 
 /* Show menu */
-.show-menu {
-    top: 0;
-}
+
 
 /* Add shadow header */
 
@@ -241,33 +153,7 @@ img {
 
 
 /*=============== HOME ===============*/
-.home__container {
-    row-gap: 4rem;
-    padding-block: 2.5rem 2rem;
-}
 
-.home__content {
-    position: relative;
-    justify-self: center;
-}
-
-.home__image {
-    width: 240px;
-    height: 240px;
-    background-color: var(--white-color);
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    /* border: 5px solid var(--first-color); */
-    box-shadow: 0 8px 32px hsla(var(--hue), 100%, 60%, .3);
-}
-
-.home__img {
-    width: 210px;
-    filter: drop-shadow(0 4px 16px hsla(0, 0%, 0%, .2));
-}
 
 /*=============== BUTTON ===============*/
 
@@ -298,36 +184,12 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width:320px) {
-    .container {
-        margin-inline: 1rem;
-    }
-}
+
 
 /* For medium devices */
 
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
-    .container {
-        margin-inline: auto;
-    }
-
-    .nav {
-        height: calc(var(--header-height) + 2rem);
-    }
-
-    .nav__close,
-    .nav__toggle {
-        display: none;
-    }
-
-    .nav__list {
-        flex-direction: row;
-        column-gap: 4rem;
-    }
-}
-
 
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
