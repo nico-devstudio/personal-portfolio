@@ -155,14 +155,13 @@ img {
     align-items: center;
 }
 
-.nav__logo {
-    color: var(--white-color);
-    font-weight: var(--font-semi-bold);
-    transition: color .4s;
+.nav__logo img {
+    max-width: 6rem;
+    transition: transform .4s;
 }
 
-.nav__logo:hover {
-    color: var(--first-color);
+.nav__logo img:hover {
+    transform: scale(1.1);
 }
 
 .nav__toggle,
@@ -185,6 +184,8 @@ img {
         border-radius: 0 0 1.5rem 1.5rem;
         transition: top .4s;
     }
+
+
 }
 
 .nav__list {
@@ -225,6 +226,8 @@ img {
     top: 1rem;
     right: 1.5rem;
 }
+
+
 
 /* Show menu */
 .show-menu {
@@ -313,16 +316,18 @@ img {
     .nav {
         height: calc(var(--header-height) + 2rem);
     }
+
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        column-gap: 4rem;
+    }
 }
 
-.nav__close,
-.nav__toggle {
-    display: none;
-}
 
-.nav__list {
-    flex-direction: row;
-    column-gap: 4rem;
-}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
