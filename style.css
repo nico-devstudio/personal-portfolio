@@ -156,8 +156,41 @@ img {
     color: white;
 }
 
-/* Navigation for mobile devices */
+.nav__menu {
+    gap: 6rem;
+}
 
+/* Navigation for mobile devices */
+@media screen and (max-width:1150px) {
+    .nav {
+        height: 6rem;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__close {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .nav__menu {
+        background-color: red;
+        height: 5rem;
+        gap: 10rem;
+    }
+
+    .nav_list {
+        height: 10rem;
+    }
+
+}
 
 /* Show menu */
 
