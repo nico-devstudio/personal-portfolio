@@ -138,58 +138,45 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header {
-    position: fixed;
-    height: 6rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: var(--z-fixed);
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-}
+
 
 .header a,
-.nav_list {
+.nav_list,
+.nav__close {
     color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.nav__menu {
-    gap: 6rem;
-}
 
 /* Navigation for mobile devices */
 @media screen and (max-width:1150px) {
     .nav {
-        height: 6rem;
-        background-color: black;
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: red;
+        text-align: center;
+        padding-block: 2rem;
+        border-radius: 0 0 1.5rem 1.5rem;
     }
 
     .nav__close {
         position: fixed;
-        top: 1rem;
-        right: 1rem;
+        top: .5rem;
+        right: .5rem
     }
 
     .nav__menu {
-        background-color: red;
-        height: 5rem;
-        gap: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
-
-    .nav_list {
-        height: 10rem;
-    }
-
 }
 
 /* Show menu */
